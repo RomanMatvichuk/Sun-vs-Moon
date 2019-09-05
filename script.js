@@ -1,9 +1,13 @@
-document.getElementById("sun").onclick = function(){
-    document.getElementById("sun").style.display = "none";
-    document.getElementById("moon").style.display = "block";
-}
-
-document.getElementById("moon").onclick = function(){
-    document.getElementById("moon").style.display = "none";
-    document.getElementById("sun").style.display = "block";
+document.getElementById("pic").onclick = function(){
+    
+    var pic = document.getElementById("pic").getAttribute("src");
+    
+    switch (pic){
+        case "images/moon.jpg":
+            document.getElementById("pic").setAttribute("src", "images/sun.jpg")
+            break;
+        case "images/sun.jpg":
+            document.getElementById("pic").setAttribute("src", "images/moon.jpg")
+            break;
+    }
 }
